@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pagos.Detalle_Pago"
+    android:background="@drawable/colorfondo">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:id="@+id/lvPagos"
+        android:layout_width="match_parent"
+        android:layout_height="371dp"
+
+        android:background="#00EBD0D0"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="137dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="234dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/lvPagos"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="100dp"
+        android:text="Cancelar" />
+
+</RelativeLayout >

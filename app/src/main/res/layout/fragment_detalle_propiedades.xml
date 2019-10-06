@@ -2,26 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.propiedades.Detalle_Propiedades"
     android:background="@drawable/colorfondo">
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="24dp"
-        android:hint="Nombre"
-        android:inputType="text"
-        android:selectAllOnFocus="true"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/apellido"
@@ -30,7 +16,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:hint="Apellido"
+        android:hint="Ambientes"
         android:inputType="text"
         android:selectAllOnFocus="true"
 
@@ -45,7 +31,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:hint="DNI"
+        android:hint="Tipo"
         android:inputType="number"
         android:selectAllOnFocus="true"
 
@@ -60,8 +46,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:hint="Uso"
         android:inputType="phone"
-        android:hint="Telefono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dni" />
@@ -73,46 +59,60 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:hint="Correo electrónico"
+        android:hint="Precio"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/telefono" />
-    //app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/contrasena"
+        android:id="@+id/nombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:hint="Calle, Altura "
+        android:inputType="text"
 
-        android:hint="Contraseña"
-
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContrato" />
+
+    <CheckBox
+        android:id="@+id/cbestaDisponible"
+        android:layout_width="104dp"
+        android:layout_height="44dp"
+        android:text="Disponible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
-        android:enabled="true"
-        android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btnAceptar"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:text="Editar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contrasena"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/cbestaDisponible" />
+
+    <TextView
+        android:id="@+id/tvContrato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Propiedad" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
